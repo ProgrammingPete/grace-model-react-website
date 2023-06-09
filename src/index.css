@@ -85,7 +85,9 @@ code {
 .main-img {
     background-image: url(./assets/images/main-img.jpg);
     background-repeat: no-repeat;
-    /* background-position: center center; */
-    /* background-size: 100% !important; */
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+
 
 }
