@@ -16,8 +16,28 @@ const introdata = {
 
 const dataAbout = {
     title: "About Myself",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    aboutme: "Hello and Welcome (or welcome back!) My name is Grace Guandu and I am located in Northeast Ohio, frequenting the Cleveland and Akron-Canton (Kent) areas. I began pursuing modeling consistently during the beginning of 2023. I am currently working with Orlando, Florida-based mother agency, modelscout non-exclusively making me open to signing with other agencies. I am also an active member of the Casting Networks site. So far, I have walked for two Cleveland fashion shows, \"A Tale of Two Cities\" and \"The Culture.\" At this time I am open for paid bookings and time-for-print (TFP) collaborations. Please see the \"Contact Me\" tab for inquiries and updated information. Thank you and have a great day!",
 };
+const agencies = [{
+        agency: "modelscout",
+        where: "Florida",
+        date: "2023",
+    },
+    {
+        agency: "Casting Networks",
+        where: "Online",
+        date: "2023",
+    }
+];
+const fashionshows = [
+    {
+        name: "A Tale of Two Cities",
+    },
+    {
+        name: "Casting Networks",
+    }   
+
+];
 
 const dataPortfolio = [{
         img: mainImg,
@@ -48,7 +68,7 @@ const dataPortfolio = [{
 
 const contactConfig = {
     YOUR_EMAIL: "graceguandu@gmail.com",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
+    //description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
 };
 
 const socialprofiles = {
@@ -63,4 +83,6 @@ export {
     contactConfig,
     socialprofiles,
     logotext,
+    agencies,
+    fashionshows
 };

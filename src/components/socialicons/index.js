@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
+
 import {
   FaGithub,
   FaTwitter,
@@ -7,7 +9,8 @@ import {
   FaLinkedin,
   FaYoutube,
   FaTwitch,
-  FaInstagram
+  FaInstagram,
+  FaMailBulk
 } from "react-icons/fa";
 import { socialprofiles } from "../../content_option";
 
@@ -64,6 +67,11 @@ export const Socialicons = (params) => {
             </a>
           </li>
         )}
+        <li>
+          <Link to="/contact">
+            <FaMailBulk />
+          </Link>
+        </li>
       </ul>
       <p>Follow Me</p>
     </div>

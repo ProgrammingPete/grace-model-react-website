@@ -1,5 +1,3 @@
-##### This is an exapmle of a company website. It's fully responsive, modern and open source.
-
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

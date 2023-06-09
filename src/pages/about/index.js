@@ -4,7 +4,9 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   dataAbout,
-  meta
+  meta,
+  agencies,
+  fashionshows
 } from "../../content_option";
 
 export const About = () => {
@@ -30,6 +32,40 @@ export const About = () => {
             <div>
               <p>{dataAbout.aboutme}</p>
             </div>
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">Agencies</h3>
+          </Col>
+          <Col lg="7">
+            <table className="table caption-top">
+              <tbody>
+                {agencies.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <th scope="row">{data.agency}</th>
+                      <td>{data.where}</td>
+                      <td>{data.date}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">Fashion Shows</h3>
+          </Col>
+          <Col lg="7">
+            {fashionshows.map((data, i) => {
+              return (
+                <div key={i}>
+                  <h3 className="progress-title">{data.name}</h3>
+                </div>
+              );
+            })}
           </Col>
         </Row>
       </Container>
