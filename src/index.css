@@ -85,7 +85,7 @@ code {
 .main-img {
     background-image: url(./assets/images/main-img.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 80%;
     background-position: center;
     min-height: 700px;
 
