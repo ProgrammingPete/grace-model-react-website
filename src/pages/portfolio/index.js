@@ -23,7 +23,7 @@ export const Portfolio = () => {
           {dataPortfolio.map((data, i) => {
             return (
               <div key={i} className="po_item">
-                <img src={data.img} alt="" />
+                <img src={data.img} />
                 {/* <div className="content">
                   <p>{data.description}</p>
                   <a href={data.link}>View Photographer</a>
