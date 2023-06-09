@@ -86,5 +86,6 @@ code {
     background-image: url(./assets/images/main-img.jpg);
     background-repeat: no-repeat;
     /* background-position: center center; */
-    background-size: 100% !important;
+    /* background-size: 100% !important; */
+
 }
