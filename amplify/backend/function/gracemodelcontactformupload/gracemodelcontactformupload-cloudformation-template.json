@@ -225,7 +225,7 @@
                 "ses:SendEmail"
               ],
               "Effect": "Allow",
-              "Resource": "arn:aws:ses:us-east-2:029238154714:identity/*"
+              "Resource": "arn:aws:ses:us-east-1:029238154714:identity/parianos.peter@gmail.com"
             }
           ]
         }
