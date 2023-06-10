@@ -15,17 +15,12 @@ const introdata = {
 };
 
 const dataAbout = {
-    title: "About Myself",
+    title: "About Me",
     aboutme: "Hello and Welcome (or welcome back!) My name is Grace Guandu and I am located in Northeast Ohio, frequenting the Cleveland and Akron-Canton (Kent) areas. I began pursuing modeling consistently during the beginning of 2023. I am currently working with Orlando, Florida-based mother agency, modelscout non-exclusively making me open to signing with other agencies. I am also an active member of the Casting Networks site. So far, I have walked for two Cleveland fashion shows, \"A Tale of Two Cities\" and \"The Culture.\" At this time I am open for paid bookings and time-for-print (TFP) collaborations. Please see the \"Contact Me\" tab for inquiries and updated information. Thank you and have a great day!",
 };
 const agencies = [{
         agency: "modelscout",
         where: "Florida",
-        date: "2023",
-    },
-    {
-        agency: "Casting Networks",
-        where: "Online",
         date: "2023",
     }
 ];
@@ -39,8 +34,37 @@ const fashionshows = [
 
 ];
 
+const otherLinks = [
+    {
+        name: "Paypal",
+        link: "http://paypal.me/graceguandu"
+    },
+    {
+        name: "Casting Networks",
+        link: "https://app.castingnetworks.com/talent/public-profile/a6640410-9b56-11ed-b14a-99353f9eb690"
+    },
+    {
+        name: "Comp Card",
+        link: "https://modelscout.modasphere.com/pdfize/?orientation=portrait&name=Compcard_Grace_Guandu.pdf&url=modelscout.modasphere.com/contact/compcard_pdf/2014645/"
+    },
+    {
+        name: "modelscout Agency",
+        link: "https://www.modelscout.com/talent/grace-guandu-01452"
+    },
+    {
+        name: "Sign the Petition",
+        link: "https://www.change.org/p/stop-hate-speech-from-kent-state-republicans?recruiter=1304392936&recruited_by_id=7201daf0-d89e-11ed-9a65-4fd73c74412c&utm_source=share_petition&utm_campaign=share_for_starters_page&utm_medium=copylink&fbclid=PAAabqSp00qtPY004Iwvq"
+    },    
+];
+
+
 const dataPortfolio = [{
         img: mainImg,
+        // description: "The wisdom of life consists in the elimination of non-essentials.",
+        // link: "#",
+    },
+    {
+        img: img4,
         // description: "The wisdom of life consists in the elimination of non-essentials.",
         // link: "#",
     },
@@ -59,11 +83,7 @@ const dataPortfolio = [{
         // description: "The wisdom of life consists in the elimination of non-essentials.",
         // link: "#",
     },
-    {
-        img: img4,
-        // description: "The wisdom of life consists in the elimination of non-essentials.",
-        // link: "#",
-    },
+
 ];
 
 const contactConfig = {
@@ -72,8 +92,10 @@ const contactConfig = {
 };
 
 const socialprofiles = {
-    instagram: "https://www.instagram.com/graceguandu/"
-
+    instagram: "https://www.instagram.com/graceguandu/",
+    tiktok: "https://tiktok.com/@graceguanduu",
+    youtube: "https://youtube.com/@GraceGuandu",
+    paypal : "http://paypal.me/graceguandu"
 };
 export {
     meta,
@@ -84,5 +106,6 @@ export {
     socialprofiles,
     logotext,
     agencies,
-    fashionshows
+    fashionshows,
+    otherLinks
 };

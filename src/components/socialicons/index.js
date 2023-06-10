@@ -10,7 +10,9 @@ import {
   FaYoutube,
   FaTwitch,
   FaInstagram,
-  FaMailBulk
+  FaMailBulk,
+  FaTiktok,
+  FaPaypal
 } from "react-icons/fa";
 import { socialprofiles } from "../../content_option";
 
@@ -67,6 +69,20 @@ export const Socialicons = (params) => {
             </a>
           </li>
         )}
+          {socialprofiles.tiktok && (
+          <li>
+            <a href={socialprofiles.tiktok}>
+              <FaTiktok />
+            </a>
+          </li>
+        )}
+        {socialprofiles.paypal && (
+          <li>
+            <a href={socialprofiles.paypal}>
+              <FaPaypal />
+            </a>
+          </li>
+        )}    
         <li>
           <Link to="/contact">
             <FaMailBulk />

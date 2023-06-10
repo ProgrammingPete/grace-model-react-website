@@ -3,7 +3,7 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
+import { contactConfig, otherLinks } from "../../content_option";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -27,7 +27,7 @@ export const ContactUs = () => {
       message: formData.message,
     };
       // replace the emailjs call with the aws one
-
+    setFormdata({loading : false});
   };
 
   const handleChange = (e) => {
@@ -123,6 +123,28 @@ export const ContactUs = () => {
                 </Col>
               </Row>
             </form>
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="5" className="mb-5">
+            <h3 className="color_sec py-4">Other Links</h3>
+          </Col>
+          <Col lg="7">
+            <table className="table">
+              <tbody>
+                {otherLinks.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <th scope="row">
+                        <a href={data.link}>
+                          {data.name}
+                        </a>
+                      </th>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </Col>
         </Row>
       </Container>
