@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "api": {
+      "gracemodelbackend": [
+        "Query",
+        "Mutation",
+        "Subscription"
+      ]
+    },
+    "storage": {
+      "EmailMessage:@model(appsync)": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "sesEmail",
+      "environmentVariableName": "SES_EMAIL"
+    },
+    {
+      "cloudFormationParameterName": "sesEmailDev",
+      "environmentVariableName": "SES_EMAIL_DEV"
+    }
+  ]
+}

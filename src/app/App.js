@@ -8,6 +8,9 @@ import withRouter from "../hooks/withRouter";
 import AppRoutes from "./routes";
 import Headermain from "../header";
 import "./App.css";
+import { Amplify } from 'aws-amplify';
+import awsconfig from '../aws-exports';
+Amplify.configure(awsconfig);
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();

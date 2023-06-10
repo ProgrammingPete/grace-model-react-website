@@ -55,7 +55,7 @@ const Headermain = () => {
             <div className="d-flex">
                 <Socialicons />
             </div>
-            <p className="copyright m-0"> {logotext}</p>
+            <p className="copyright m-0">{logotext}, Made By Peter Parianos</p>
           </div>
         </div>
       </header>

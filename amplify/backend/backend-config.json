@@ -1,0 +1,80 @@
+{
+  "api": {
+    "gracemodelbackend": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "function": {
+    "gracemodelcontactformupload": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "gracemodelbackend"
+        },
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "gracemodelbackend"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_gracemodelcontactformupload_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gracemodelcontactformupload"
+        }
+      ]
+    },
+    "AMPLIFY_function_gracemodelcontactformupload_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gracemodelcontactformupload"
+        }
+      ]
+    },
+    "AMPLIFY_function_gracemodelcontactformupload_sesEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gracemodelcontactformupload"
+        }
+      ]
+    },
+    "AMPLIFY_function_gracemodelcontactformupload_sesEmailDev": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gracemodelcontactformupload"
+        }
+      ]
+    }
+  }
+}

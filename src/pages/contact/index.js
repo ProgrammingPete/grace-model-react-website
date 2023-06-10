@@ -4,6 +4,8 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig, otherLinks } from "../../content_option";
+import { API } from 'aws-amplify';
+import { createEmailMessage } from '../../graphql/mutations';
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -19,13 +21,39 @@ export const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormdata({ loading: true });
-
-    const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
-      message: formData.message,
-    };
+    const { name, email, message } = formData;
+    if(name && email) {
+      console.log("Calling graphql function");
+      API.graphql({
+        query: createEmailMessage,
+        variables: {
+          input: {
+            name,
+            email,
+            message
+          },
+        },
+      }).then(
+        (result) => {
+          console.log(result);
+          setFormdata({
+            loading: false,
+            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            variant: "success",
+            show: true,
+          });
+        },
+        (error) => {
+          console.log(error);
+          setFormdata({
+            alertmessage: `Faild to send!,${error}`,
+            variant: "danger",
+            show: true,
+          });
+          document.getElementsByClassName("co_alert")[0].scrollIntoView();
+        }
+      );
+    }
       // replace the emailjs call with the aws one
     setFormdata({loading : false});
   };
@@ -130,21 +158,17 @@ export const ContactUs = () => {
             <h3 className="color_sec py-4">Other Links</h3>
           </Col>
           <Col lg="7">
-            <table className="table">
-              <tbody>
-                {otherLinks.map((data, i) => {
-                  return (
-                    <tr key={i}>
-                      <th scope="row">
-                        <a href={data.link}>
+            {otherLinks.map((data, i) => {
+              return (
+                <div key={i}>
+                  <h3 className="progress-title">
+                    <a href={data.link}>
                           {data.name}
-                        </a>
-                      </th>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                    </a>
+                  </h3>
+                </div>
+              );
+            })}
           </Col>
         </Row>
       </Container>

@@ -1,0 +1,28 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gracemodelbackend-dev-145805-authRole",
+      "UnauthRoleArn": "arn:aws:iam::029238154714:role/amplify-gracemodelbackend-dev-145805-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::029238154714:role/amplify-gracemodelbackend-dev-145805-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-gracemodelbackend-dev-145805-deployment",
+      "UnauthRoleName": "amplify-gracemodelbackend-dev-145805-unauthRole",
+      "StackName": "amplify-gracemodelbackend-dev-145805",
+      "StackId": "arn:aws:cloudformation:us-east-1:029238154714:stack/amplify-gracemodelbackend-dev-145805/b9f5e800-07c0-11ee-ab2e-0e301f120667",
+      "AmplifyAppId": "d1unxddzj7tjnz"
+    },
+    "categories": {
+      "function": {
+        "gracemodelcontactformupload": {
+          "sesEmail": "graceguandu@gmail.com",
+          "sesEmailDev": "parianos.peter@gmail.com",
+          "deploymentBucketName": "amplify-gracemodelbackend-dev-145805-deployment",
+          "s3Key": "amplify-builds/gracemodelcontactformupload-324c6b6e52582b6c7545-build.zip"
+        }
+      },
+      "api": {
+        "gracemodelbackend": {}
+      }
+    }
+  }
+}
