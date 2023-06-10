@@ -38,7 +38,7 @@ export const ContactUs = () => {
           console.log(result);
           setFormdata({
             loading: false,
-            alertmessage: "SUCCESS! ,Thank you for your messege",
+            alertmessage: "SUCCESS! Thank you for your message",
             variant: "success",
             show: true,
           });
