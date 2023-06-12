@@ -46,7 +46,7 @@ export const ContactUs = () => {
         (error) => {
           console.log(error);
           setFormdata({
-            alertmessage: `Faild to send!,${error}`,
+            alertmessage: `Failed to send! ${error}`,
             variant: "danger",
             show: true,
           });
