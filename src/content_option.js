@@ -28,11 +28,7 @@ const agencies = [{
 const fashionshows = [
     {
         name: "A Tale of Two Cities",
-    },
-    {
-        name: "Casting Networks",
-    }   
-
+    }  
 ];
 
 const otherLinks = [
