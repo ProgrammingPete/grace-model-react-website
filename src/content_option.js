@@ -8,7 +8,7 @@ import img5 from "./assets/images/img4.jpg";
 const logotext = "GRACE GUANDU";
 const meta = {
     title: "Grace Guandu",
-    description: "I’m Grace Guandu, independent model located in Cleveland Ohio",
+    description: "I’m Grace Guandu, model located in Cleveland Ohio",
 };
 
 const introdata = {
@@ -28,7 +28,10 @@ const agencies = [{
 const fashionshows = [
     {
         name: "A Tale of Two Cities",
-    }  
+    },
+    {
+        name: "The Culture",
+    },
 ];
 
 const otherLinks = [
