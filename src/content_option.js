@@ -27,10 +27,14 @@ const agencies = [{
 ];
 const fashionshows = [
     {
-        name: "A Tale of Two Cities",
+        name: "A Tale of Two Cities", 
+        where: "Cleveland, Ohio",
+        date: "January 2023"
     },
     {
         name: "The Culture",
+        where: "Cleveland, Ohio",
+        date: "April 2023"
     },
 ];
 

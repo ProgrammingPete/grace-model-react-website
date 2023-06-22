@@ -56,13 +56,19 @@ export const About = () => {
             <h3 className="color_sec py-4">Fashion Shows</h3>
           </Col>
           <Col lg="7">
-            {fashionshows.map((data, i) => {
-              return (
-                <div key={i}>
-                  <h3 className="progress-title">{data.name}</h3>
-                </div>
-              );
-            })}
+          <table className="table caption-top">
+              <tbody>
+                {fashionshows.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                    <th scope="row">{data.name}</th>
+                    <td>{data.where}</td>
+                    <td>{data.date}</td>
+                  </tr>
+                  );
+                })}
+            </tbody>
+            </table>
           </Col>
         </Row>
       </Container>
