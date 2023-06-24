@@ -104,6 +104,8 @@ export const ContactUs = () => {
             </address>
             <p>{contactConfig.description}</p>
           </Col>
+
+          { (process.env.NODE_ENV !== 'production') ?  
           <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">
               <Row>
@@ -152,6 +154,7 @@ export const ContactUs = () => {
               </Row>
             </form>
           </Col>
+          : null }
         </Row>
         <Row className="sec_sp">
           <Col lg="5" className="mb-5">
