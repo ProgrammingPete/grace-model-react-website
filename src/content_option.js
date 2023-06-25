@@ -51,10 +51,6 @@ const otherLinks = [
         name: "modelscout Agency",
         link: "https://www.modelscout.com/talent/grace-guandu-01452"
     },
-    {
-        name: "Sign the Petition",
-        link: "https://www.change.org/p/stop-hate-speech-from-kent-state-republicans?recruiter=1304392936&recruited_by_id=7201daf0-d89e-11ed-9a65-4fd73c74412c&utm_source=share_petition&utm_campaign=share_for_starters_page&utm_medium=copylink&fbclid=PAAabqSp00qtPY004Iwvq"
-    },    
 ];
 
 
