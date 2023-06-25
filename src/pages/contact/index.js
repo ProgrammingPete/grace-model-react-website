@@ -82,7 +82,6 @@ export const ContactUs = () => {
         <Row className="sec_sp">
           <Col lg="12">
             <Alert
-              //show={formData.show}
               variant={formData.variant}
               className={`rounded-0 co_alert ${
                 formData.show ? "d-block" : "d-none"
@@ -105,7 +104,6 @@ export const ContactUs = () => {
             <p>{contactConfig.description}</p>
           </Col>
 
-          { (process.env.NODE_ENV !== 'production') ?  
           <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">
               <Row>
@@ -154,7 +152,6 @@ export const ContactUs = () => {
               </Row>
             </form>
           </Col>
-          : null }
         </Row>
         <Row className="sec_sp">
           <Col lg="5" className="mb-5">
