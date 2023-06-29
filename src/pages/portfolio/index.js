@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button, Modal } from "react-bootstrap";
 import { dataPortfolio, meta } from "../../content_option";
+import Slider  from '../../components/Slider/slider';
+
+/*
+
+For some reason I gotta put the modal in the same component. It should be refactored into its own component eventaully. Just gotta figure out state..... 
+
+*/
 
 export const Portfolio = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => {
+    console.log("handleClose() called");
+    setShow(false);
+  }
+
+  const handleShow = () => {
+    console.log("handleShow() called");
+    setShow(true);
+  }
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -13,21 +32,35 @@ export const Portfolio = () => {
           <title> Portfolio | {meta.title} </title>{" "}
           <meta name="description" content={meta.description} />
         </Helmet>
-        <Row className="mb-5 mt-3 pt-md-3">
-          <Col lg="8">
-            <h1 className="display-4 mb-4"> Portfolio </h1>{" "}
-            <hr className="t_border my-4 ml-0 text-left" />
-          </Col>
-        </Row>
+        <div
+            className="d-flex align-items-center justify-content-center po_items_ho"
+            style={{ display: 'block', position: 'initial' }}
+          >
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Gallery</Modal.Title>
+              </Modal.Header>
+
+              <Modal.Body>
+                <Slider slides={dataPortfolio}/>
+              </Modal.Body>
+            </Modal>
+          </div>
         <div className="mb-5 po_items_ho">
+
+          <Row className="mb-5 mt-3 pt-md-3">
+            <Col lg="8">
+              <h1 className="display-4 mb-4"> Portfolio </h1>{" "}
+              <hr className="t_border my-4 ml-0 text-left" />
+            </Col>
+          </Row>
           {dataPortfolio.map((data, i) => {
             return (
               <div key={i} className="po_item">
                 <img src={data.img} />
-                {/* <div className="content">
-                  <p>{data.description}</p>
-                  <a href={data.link}>View Photographer</a>
-                </div> */}
+                <div className="content">
+                  <Button className="  nav_ac"  onClick={handleShow}>View Gallery</Button>
+                </div>
               </div>
             );
           })}

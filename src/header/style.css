@@ -14,6 +14,18 @@
     box-shadow: unset;
 }
 
+/*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--text-color-2); /*set the color you want here*/
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--text-color-2); /*set the color you want here*/
+}
+
 .menu__button svg {
     width: 2em;
     height: 2em;
