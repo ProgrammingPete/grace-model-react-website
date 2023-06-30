@@ -78,3 +78,10 @@
 .po_item .content a:hover {
     text-decoration: none;
 }
+.modal-backdrop {
+    background-color: var(--bg-color);
+}
+.my-modal .modal-content {
+    background-color: var(--bg-color);
+    min-width: 100%;
+}

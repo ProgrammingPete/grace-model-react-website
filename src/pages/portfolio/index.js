@@ -36,7 +36,7 @@ export const Portfolio = () => {
             className="d-flex align-items-center justify-content-center po_items_ho"
             style={{ display: 'block', position: 'initial' }}
           >
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} className="my-modal">
               <Modal.Header closeButton>
                 <Modal.Title>Gallery</Modal.Title>
               </Modal.Header>
