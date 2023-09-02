@@ -56,11 +56,8 @@ export const Portfolio = () => {
           </Row>
           {dataPortfolio.map((data, i) => {
             return (
-              <div key={i} className="po_item">
+              <div key={i} className="po_item" onClick={handleShow}>
                 <img src={data.img} />
-                <div className="content">
-                  <Button className="  nav_ac"  onClick={handleShow}>View Gallery</Button>
-                </div>
               </div>
             );
           })}
