@@ -45,11 +45,11 @@ const otherLinks = [
     },
     {
         name: "Comp Card",
-        link: "https://modelscout.modasphere.com/pdfize/?orientation=portrait&name=Compcard_Grace_Guandu.pdf&url=modelscout.modasphere.com/contact/compcard_pdf/2014645/"
+        link: "https://grace-pdf.s3.amazonaws.com/Compcard_Grace_Guandu.pdf"
     },
     {
         name: "modelscout Agency",
-        link: "https://www.modelscout.com/talent/grace-guandu-01452"
+        link: "https://www.modelscout.com/web-direct/all/2270885/grace-guandu"
     },
 ];
 
