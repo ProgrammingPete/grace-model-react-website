@@ -4,6 +4,9 @@ import img2 from "./assets/images/img2.jpg";
 import img3 from "./assets/images/img3.jpg";
 import img4 from "./assets/images/img5.jpg";
 import img5 from "./assets/images/img4.jpg";
+import img6 from "./assets/images/img6.jpg";
+import img7 from "./assets/images/img7.jpg";
+import img8 from "./assets/images/img8.jpg";
 
 const logotext = "GRACE GUANDU";
 const meta = {
@@ -74,13 +77,28 @@ const dataPortfolio = [{
         // description: "The wisdom of life consists in the elimination of non-essentials.",
         // link: "#",
     },
+    // {
+    //     img: img2,
+    //     // description: "The wisdom of life consists in the elimination of non-essentials.",
+    //     // link: "#",
+    // },
+    // {
+    //     img: img3,
+    //     // description: "The wisdom of life consists in the elimination of non-essentials.",
+    //     // link: "#",
+    // },
     {
-        img: img2,
+        img: img6,
         // description: "The wisdom of life consists in the elimination of non-essentials.",
         // link: "#",
     },
     {
-        img: img3,
+        img: img7,
+        // description: "The wisdom of life consists in the elimination of non-essentials.",
+        // link: "#",
+    },
+    {
+        img: img8,
         // description: "The wisdom of life consists in the elimination of non-essentials.",
         // link: "#",
     },
